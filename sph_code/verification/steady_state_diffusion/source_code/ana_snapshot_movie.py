@@ -45,9 +45,7 @@ def fig_cmap(tmp_name, file_number, last_file, N_file, dt, N_sys, N_inn, WL_thic
         #=========================#
         #  figure                 #
         #=========================#
-        fig = plt.figure(figsize=(14,5.5), facecolor='white')
-        plt.subplots_adjust(left=0.1, right=0.95, bottom=0.18, top=0.90, wspace=0.4, hspace=0.4)
-        
+        fig = plt.figure(figsize=(12,6), facecolor='white', constrained_layout=True)        
         ax1 = fig.add_subplot(121, facecolor='white')
         ax2 = fig.add_subplot(122, facecolor='white')
 
@@ -56,12 +54,15 @@ def fig_cmap(tmp_name, file_number, last_file, N_file, dt, N_sys, N_inn, WL_thic
         #=========================#
         cfig = ax1.scatter(SP_x[:N_inn, 0], SP_x[:N_inn, 1], c=SP_f[:N_inn], ec='k', marker='.', \
                            cmap='jet', s=mark_size, linewidth=0.1, vmin=-1, vmax=1)
-        cbar = plt.colorbar(cfig, aspect=30, shrink=0.9, ax=ax1, orientation='vertical', pad=0.05, location='right')
-        cbar.set_label(r'$f$', fontsize=18, labelpad=15)
-
+        cbar = plt.colorbar(cfig, aspect=30, shrink=0.75, ax=ax1, orientation='vertical', pad=0.05, location='right', \
+                            ticks=[-1.0, -0.5, 0, 0.5, 1.0])
+    
         # color bar
-        cbar.ax.tick_params(direction='out', length=4, width=1, labelsize=12)
+        cbar.ax.tick_params(direction='out', length=4, width=1, labelsize=14)
         cbar.ax.set_ylim(-1, 1)
+
+        # text
+        ax1.text(0.1, -0.3, '(a) Analytical steady solution', fontsize=16)
 
         #=========================#
         #  ax2                    #
@@ -69,12 +70,16 @@ def fig_cmap(tmp_name, file_number, last_file, N_file, dt, N_sys, N_inn, WL_thic
         cfig = ax2.scatter(SP_x[:N_inn, 0], SP_x[:N_inn, 1], c=SP_err, ec='k', marker='.', \
                            cmap='binary', s=mark_size, linewidth=0.1, \
                            norm=colors.LogNorm(vmin=err_min, vmax=err_max))
-        cbar = plt.colorbar(cfig, aspect=30, shrink=0.9, ax=ax2, orientation='vertical', pad=0.05, location='right')
-        cbar.set_label(r'$f$', fontsize=18, labelpad=15)
+        cbar = plt.colorbar(cfig, aspect=30, shrink=0.75, ax=ax2, orientation='vertical', pad=0.05, location='right')
+        # cbar.set_label('Absolute error', fontsize=16, labelpad=15)
 
         # color bar
-        cbar.ax.tick_params(direction='out', length=4, width=1, labelsize=12)
+        cbar.ax.tick_params(which='major', direction='out', length=4, width=1, labelsize=14)
+        cbar.ax.tick_params(which='minor', direction='out')
         cbar.ax.set_ylim(err_min, err_max)
+
+        # text
+        ax2.text(0.1, -0.3, '(a) Analytical steady solution', fontsize=16)
 
         ax_list = [ax1, ax2]
         for ax in ax_list:
@@ -85,7 +90,7 @@ def fig_cmap(tmp_name, file_number, last_file, N_file, dt, N_sys, N_inn, WL_thic
             # lim
             ax.set_xlim(0, 1)
             ax.set_ylim(0, 1)
-            # ax.axis('equal')
+            ax.set_aspect('equal', 'box')
 
             # ticks
             ax.tick_params(axis='both', which='major', direction='out', length=4, width=1, labelsize=14)

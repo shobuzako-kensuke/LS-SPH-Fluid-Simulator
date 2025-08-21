@@ -19,9 +19,9 @@ subroutine out_input
     path_name = '../output/'//trim(adjustl(save_name))//'/'
     call mkdir(trim(adjustl(path_name)))
     source_name = './Makefile'
-    call cp_file(trim(adjustl(source_name)), trim(adjustl(path_name))) ! copy Makefile
+    call cp_file(trim(adjustl(source_name)), trim(adjustl(path_name)))  ! copy Makefile
     source_name = './input.f90'
-    call cp_file(trim(adjustl(source_name)), trim(adjustl(path_name))) ! copy input.f90
+    call cp_file(trim(adjustl(source_name)), trim(adjustl(path_name)))  ! copy input.f90
 
 end subroutine out_input
 

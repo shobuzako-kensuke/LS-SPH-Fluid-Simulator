@@ -14,7 +14,7 @@ FLIBS = -Wl,--start-group \
 		-Wl,--end-group -liomp5 -lpthread -lm -ldl
 
 # Compilation Options =========================================================#
-SPH_model        = LS_SPH_2ND
+SPH_model        = classical_SPH_Laplacian
 kernel_function  = WENDLAND_C2
 variable_density = CONSTANT_DENSITY
 virtual_marker   = VM_ON

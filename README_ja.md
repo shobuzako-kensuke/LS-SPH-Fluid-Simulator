@@ -47,7 +47,7 @@
 
 ## 🖥️ 使い方
 
-1. 該当ディレクトリに移動 (例：`sph_code/benchmarks/ELS_SPH/lid_driven_cavity_flow/source_code`)
+1. 該当ディレクトリに移動 (例：`sph_code/benchmarks/ELS_SPH/Taylor_Green_vortex/source_code`)
 2. ターミナルから `make` を実行し，Fortranファイルをコンパイル
 3. 続けて，`./start_calculation` を実行し，計算を開始
 4. 計算終了後, `python main.py` を実行し，動画等を作成

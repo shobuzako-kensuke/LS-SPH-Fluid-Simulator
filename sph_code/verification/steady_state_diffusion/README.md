@@ -1,27 +1,20 @@
-# Steady State Diffusion
-
-This code verifies various SPH models by a steady state diffusion equation.
-
-|Granular Column Collapse (2D) | Initial setting (an example) |
-|:---:|:---:|
-|<img src="https://github.com/user-attachments/assets/cb0b81a5-61bb-4860-b0f8-f94014b2cc68" alt="granular_column_collapse" width=300>|<img src="https://github.com/user-attachments/assets/c3709de8-9f0e-4d21-8b0a-f8f83a1f303c" alt="initial_setting_granular_column_collapse_2D" width=300>|
+# Steady-State Diffusion
 
 ## 🚩Overview
 
 ### Problem Statement
-This code solves the steady solution of the following two-dimensional diffusion equation:
+This code solves for a steady-state solution of the following two-dimensional diffusion equation:
 ```math
 \begin{align}
 \frac{\partial f}{\partial t} = \frac{\partial^{2} f}{\partial x^{2}} + \frac{\partial^{2} f}{\partial y^{2}} + 2\pi^{2} \sin(\pi x) \cos(\pi y)~~,~~x,y \in [0,1]~.
 \end{align}
 ```
-In this framework, the steady solution
+The steady-state solution is analytically given by
 ```math
 \begin{align}
-f(x,y) = \sin(\pi x) \cos(\pi y)
+f(x,y) = \sin(\pi x) \cos(\pi y)~.
 \end{align}
 ```
-is obtained by solving Eq. (1) explicitly until it converges.
 The boundary conditions are described below:  
 | Wall |Dirichlet | Neumann |
 |:---|:---:|:---:|
@@ -32,6 +25,11 @@ The boundary conditions are described below:
 
 > [!NOTE]
 > The values of $f$ at the four corners are zero.
+
+|Granular Column Collapse (2D) | Initial setting (an example) |
+|:---:|:---:|
+|<img src="https://github.com/user-attachments/assets/cb0b81a5-61bb-4860-b0f8-f94014b2cc68" alt="granular_column_collapse" width=300>|<img src="https://github.com/user-attachments/assets/c3709de8-9f0e-4d21-8b0a-f8f83a1f303c" alt="initial_setting_granular_column_collapse_2D" width=300>|
+
 
 ### Numerical Models
 

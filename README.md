@@ -39,7 +39,7 @@ This code is written in **Fortran** (for calculations) and **Python** (for visua
 
 ## 🖥️ Usage
 
-1. Navigate to the simulation directory (e.g., `sph_code/benchmarks/ELS_SPH/lid_driven_cavity_flow/source_code`)
+1. Navigate to the simulation directory (e.g., `sph_code/benchmarks/ELS_SPH/Taylor_Green_vortex/source_code`)
 2. Run `make` to build the Fortran programs.
 3. Run `./start_calculation` to start the calculation.
 4. After the simulation finishes, run `python main.py` to generate figures.

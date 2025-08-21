@@ -5,7 +5,7 @@ save_name = 'test'
 #=========================#
 #  program switch         #
 #=========================#
-fig_ini = False   # figures for initial settings
+fig_ini = True   # figures for initial settings
 fig_f   = True   # snapshots of function value f
 
 # メモ：解析解の図，最終的な解析解とのL2ノルム計測（内部と境界で分ける）
@@ -13,7 +13,7 @@ fig_f   = True   # snapshots of function value f
 #=========================#
 #  scatter size           #
 #=========================#
-mark_size = 40
+mark_size = 500
 err_min   = 1e-3
 err_max   = 1
 
@@ -64,7 +64,6 @@ print('+ -------------------------------------------------------- +')
 #==============================================================================#
 #                            main program below                                #
 #==============================================================================#
-
 #=========================#
 #  initial settings       #
 #=========================#
@@ -77,7 +76,7 @@ if fig_ini:
     print('+ -------------------------------------------------------- +')
 
 #=========================#
-#  exe_snapshots          #
+#  movies                 #
 #=========================#
 if fig_f:
     print('[message] Snapshots of function value f are being made.')

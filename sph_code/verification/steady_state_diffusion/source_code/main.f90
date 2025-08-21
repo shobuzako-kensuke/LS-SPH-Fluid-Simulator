@@ -11,7 +11,7 @@ program main
     !=========================!
     implicit none
     character(len=999) :: save_step
-    real(8) :: omp_get_wtime, y_min
+    real(8) :: omp_get_wtime
 
     write(*,*) '+ ------------------------------------------------------------------------ +'
     write(*,*) '[message] Calculation has started.'
@@ -60,7 +60,7 @@ program main
             SP_f(:N_inn) = SP_f_next(:)
             call cal_VM_to_WL
 
-            if (mod(step, write_step) == 0) then
+            if (mod(step, write_step) == 0) then     ! save
             write(save_step,*) step
                 call out_data(trim(adjustl(save_step)))
             endif

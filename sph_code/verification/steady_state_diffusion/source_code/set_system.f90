@@ -188,11 +188,13 @@ subroutine set_system
     !                          position perturbation                           !
     !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>!
     call random_seed()
+
     do me = 1, N_inn
         call random_number(rand_val)
-        SP_x(me,1) = SP_x(me,1)* (1.0d0 + x_rand* (rand_val - 0.5d0)* 2.0d0)
+        SP_x(me,1) = SP_x(me,1) + x_rand* D* ((rand_val * 2.0d0) - 1.0d0) 
+        
         call random_number(rand_val)
-        SP_x(me,2) = SP_x(me,2)* (1.0d0 + x_rand* (rand_val - 0.5d0)* 2.0d0)
+        SP_x(me,2) = SP_x(me,2) + x_rand* D* ((rand_val * 2.0d0) - 1.0d0)
     enddo
 
 end subroutine set_system
