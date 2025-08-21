@@ -1,5 +1,7 @@
 # Steady-State Diffusion
 
+<img width=600 alt="steady_state_diffusion_initial_settings" src="https://github.com/user-attachments/assets/55fb12cb-73b1-401f-be33-d029e65e84d1" />
+
 ## 🚩Overview
 
 ### Problem Statement
@@ -25,11 +27,6 @@ The boundary conditions are described below:
 
 > [!NOTE]
 > The values of $f$ at the four corners are zero.
-
-|Granular Column Collapse (2D) | Initial setting (an example) |
-|:---:|:---:|
-|<img src="https://github.com/user-attachments/assets/cb0b81a5-61bb-4860-b0f8-f94014b2cc68" alt="granular_column_collapse" width=300>|<img src="https://github.com/user-attachments/assets/c3709de8-9f0e-4d21-8b0a-f8f83a1f303c" alt="initial_setting_granular_column_collapse_2D" width=300>|
-
 
 ### Numerical Models
 
@@ -86,7 +83,7 @@ where $f _{i} \equiv f(\bm{x} _{i})$, $\Omega _{i}$ is the index set of the part
 `classical_SPH_Laplacian`  
 ```math
 \begin{align}
-\nabla^{2} f|_{\bm{x}=\bm{x} _{i}} = 2\sum_{j\in \Omega _{i}}\left(f _{j}-f_{i}\right) \frac{\bm{x} _{ji} \cdot \nabla _{i} W_{ij}}{r _{ij}^{2}} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~,
+\nabla^{2} f|_{\boldsymbol{x}=\bm{x} _{i}} = 2\sum_{j\in \Omega _{i}}\left(f _{j}-f_{i}\right) \frac{\bm{x} _{ji} \cdot \nabla _{i} W_{ij}}{r _{ij}^{2}} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~,
 \end{align}
 ```
 where $f _{i} \equiv f(\bm{x} _{i})$, $\Omega _{i}$ is the index set of the particles located within the support of the kernel function centered at $\bm{x} _{i}$, $\bm{x}_{ji} \equiv \bm{x}_{j}-\bm{x}_{i}$, $W _{ij} \equiv W(r _{ij};h)$ is the kernel function ($r _{ij} \equiv |\bm{x} _{i}-\bm{x} _{j}|$ and $h$ is the smoothing length), $V _{j}$ is the volume of particle $j$, and $\Delta x$ is the typical particle distance.
