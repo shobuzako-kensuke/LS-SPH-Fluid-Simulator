@@ -56,37 +56,37 @@ In Makefile, you can select the following options.
 f _{i}=\sum_{j\in \Omega _{i}}f _{j}W_{ij}V_{j} + \mathcal{O}\left((\Delta x)^{0} \right)~,
 \end{align}
 ```
-where $f _{i} \equiv f(\boldsymbol{x} _{i})$, $\Omega _{i}$ is the index set of the particles located within the support of the kernel function centered at $\boldsymbol{x} _{i}$, $W _{ij} \equiv W(r _{ij};h)$ is the kernel function ($r _{ij} \equiv |\boldsymbol{x} _{i}-\boldsymbol{x} _{j}|$ and $h$ is the smoothing length), $V _{j}$ is the volume, and $\Delta x$ is the typical particle distance.
+where $f _{i} \equiv f(\vec{x} _{i})$, $\Omega _{i}$ is the index set of the particles located within the support of the kernel function centered at $\vec{x} _{i}$, $W _{ij} \equiv W(r _{ij};h)$ is the kernel function ($r _{ij} \equiv |\vec{x} _{i}-\vec{x} _{j}|$ and $h$ is the smoothing length), $V _{j}$ is the volume, and $\Delta x$ is the typical particle distance.
 
 
 `classical_SPH_1st`  
 ```math
 \begin{align}
-\nabla f|_{\boldsymbol{x}=\boldsymbol{x} _{i}} = \sum_{j\in \Omega _{i}}f _{j}\nabla _{i} W_{ij} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~.
+\nabla f|_{\vec{x}=\vec{x} _{i}} = \sum_{j\in \Omega _{i}}f _{j}\nabla _{i} W_{ij} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~.
 \end{align}
 ```
 
 `classical_SPH_1st_sum`  
 ```math
 \begin{align}
-\nabla f|_{\boldsymbol{x}=\boldsymbol{x} _{i}} = \sum_{j\in \Omega _{i}}\left(f _{j}+f_{i}\right)\nabla _{i} W_{ij} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~.
+\nabla f|_{\vec{x}=\vec{x} _{i}} = \sum_{j\in \Omega _{i}}\left(f _{j}+f_{i}\right)\nabla _{i} W_{ij} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~.
 \end{align}
 ```
 
 `classical_SPH_1st_dif`  
 ```math
 \begin{align}
-\nabla f|_{\boldsymbol{x}=\boldsymbol{x} _{i}} = \sum_{j\in \Omega _{i}}\left(f _{j}-f_{i}\right) \nabla _{i} W_{ij} V_{j} + \mathcal{O}\left((\Delta x)^{0} \right)~.
+\nabla f|_{\vec{x}=\vec{x} _{i}} = \sum_{j\in \Omega _{i}}\left(f _{j}-f_{i}\right) \nabla _{i} W_{ij} V_{j} + \mathcal{O}\left((\Delta x)^{0} \right)~.
 \end{align}
 ``` -->
 
 `classical_SPH_Laplacian`  
 ```math
 \begin{align}
-\nabla^{2} f|_{\boldsymbol{x}=\boldsymbol{x} _{i}} = 2\sum_{j\in \Omega _{i}}\left(f _{j}-f_{i}\right) \frac{\boldsymbol{x} _{ji} \cdot \nabla _{i} W_{ij}}{r _{ij}^{2}} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~,
+\nabla^{2} f|_{\vec{x}=\vec{x} _{i}} = 2\sum_{j\in \Omega _{i}}\left(f _{j}-f_{i}\right) \frac{\vec{x} _{ji} \cdot \nabla _{i} W_{ij}}{r _{ij}^{2}} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~,
 \end{align}
 ```
-where $f _{i} \equiv f(\boldsymbol{x} _{i})$, $\Omega _{i}$ is the index set of the particles located within the support of the kernel function centered at $\boldsymbol{x} _{i}$, $\boldsymbol{x}_{ji} \equiv \boldsymbol{x}_{j}-\boldsymbol{x}_{i}$, $W _{ij} \equiv W(r _{ij};h)$ is the kernel function ($r _{ij} \equiv |\boldsymbol{x} _{i}-\boldsymbol{x} _{j}|$ and $h$ is the smoothing length), $V _{j}$ is the volume of particle $j$, and $\Delta x$ is the typical particle distance.
+where $f _{i} \equiv f(\vec{x} _{i})$, $\Omega _{i}$ is the index set of the particles located within the support of the kernel function centered at $\vec{x} _{i}$, $\vec{x}_{ji} \equiv \vec{x}_{j}-\vec{x}_{i}$, $W _{ij} \equiv W(r _{ij};h)$ is the kernel function ($r _{ij} \equiv |\vec{x} _{i}-\vec{x} _{j}|$ and $h$ is the smoothing length), $V _{j}$ is the volume of particle $j$, and $\Delta x$ is the typical particle distance.
 
 <!-- `corrected_SPH_0th`  
 ```math
@@ -104,13 +104,13 @@ C _{i} \equiv \sum_{j\in \Omega _{i}}W_{ij}V_{j}~.
 `corrected_SPH_1st`  
 ```math
 \begin{align}
-\nabla f|_{\boldsymbol{x}=\boldsymbol{x} _{i}}=\boldsymbol{B} _{i}^{-1}\sum_{j\in \Omega _{i}}\left(f _{j} - f _{i}\right) \nabla _{i} W_{ij}V_{j} + \mathcal{O}\left((\Delta x)^{1} \right)~,
+\nabla f|_{\vec{x}=\vec{x} _{i}}=\vec{B} _{i}^{-1}\sum_{j\in \Omega _{i}}\left(f _{j} - f _{i}\right) \nabla _{i} W_{ij}V_{j} + \mathcal{O}\left((\Delta x)^{1} \right)~,
 \end{align}
 ```
 where
 ```math
 \begin{align}
-\boldsymbol{B} _{i} \equiv \sum_{j\in \Omega _{i}} (\nabla _{i}W_{ij}) \boldsymbol{x} _{ji}^{T} V_{j}~.
+\vec{B} _{i} \equiv \sum_{j\in \Omega _{i}} (\nabla _{i}W_{ij}) \vec{x} _{ji}^{T} V_{j}~.
 \end{align}
 ``` -->
 
@@ -118,27 +118,27 @@ where
 For `LS_SPH_2ND`, 
 ```math
 \begin{align}
-\boldsymbol{M}\tilde{\boldsymbol{d}}=\boldsymbol{b}~,
+M\tilde{\vec{d}}=\vec{b}~,
 \end{align}
 ```
 where
 ```math
 \begin{align}
-\boldsymbol{M} &\equiv \sum _{j\in \Omega _{i}} \boldsymbol{a} \boldsymbol{a}^{T} W_{ij} V_{j}~, \\
-\boldsymbol{a} &\equiv 
+M &\equiv \sum _{j\in \Omega _{i}} \vec{a} \vec{a}^{T} W_{ij} V_{j}~, \\
+\vec{a} &\equiv 
 \begin{bmatrix}
 \dfrac{x_{ji}}{h} & \dfrac{y_{ji}}{h} & \dfrac{1}{2!} \dfrac{x_{ji}^{2}}{h^{2}} & \dfrac{x_{ji} y_{ji}}{h^{2}} & \dfrac{1}{2!} \dfrac{y_{ji}^{2}}{h^{2}}
 \end{bmatrix}^{T}~, \\
-\tilde{\boldsymbol{d}} &\equiv 
+\tilde{\vec{d}} &\equiv 
 \begin{bmatrix}
-h~\widetilde{\dfrac{\partial f}{\partial x}\Bigg|_{\boldsymbol{x}_{i}}} &h~\widetilde{\dfrac{\partial f}{\partial y}\Bigg|_{\boldsymbol{x}_{i}}} & h^{2}~\widetilde{\dfrac{\partial^{2} f}{\partial x^{2}}\Bigg|_{\boldsymbol{x}_{i}}} & h^{2}~\widetilde{\dfrac{\partial^{2} f}{\partial x \partial y}\Bigg|_{\boldsymbol{x}_{i}}} & h^{2}~\widetilde{\dfrac{\partial^{2} f}{\partial y^{2}}\Bigg|_{\boldsymbol{x}_{i}}}
+h~\widetilde{\dfrac{\partial f}{\partial x}\Bigg|_{\vec{x}_{i}}} &h~\widetilde{\dfrac{\partial f}{\partial y}\Bigg|_{\vec{x}_{i}}} & h^{2}~\widetilde{\dfrac{\partial^{2} f}{\partial x^{2}}\Bigg|_{\vec{x}_{i}}} & h^{2}~\widetilde{\dfrac{\partial^{2} f}{\partial x \partial y}\Bigg|_{\vec{x}_{i}}} & h^{2}~\widetilde{\dfrac{\partial^{2} f}{\partial y^{2}}\Bigg|_{\vec{x}_{i}}}
 \end{bmatrix}^{T}~, \\
-\boldsymbol{b} &\equiv \sum_{j \in \Omega _{i}} \boldsymbol{a} f_{j} W_{ij} V_{j}~,
+\vec{b} &\equiv \sum_{j \in \Omega _{i}} \vec{a} f_{j} W_{ij} V_{j}~,
 \end{align}
 ```
 where a tilde denotes an approximation, and the discretization error of their derivatives are of second-order and first-order accuracies, respectively.  
 
-<!-- `LS_SPH_type_B` is produced by eliminating the first term in the vectors $\boldsymbol{a}$ and  $\tilde{\boldsymbol{d}}$. -->
+<!-- `LS_SPH_type_B` is produced by eliminating the first term in the vectors $\vec{a}$ and  $\tilde{\vec{d}}$. -->
 
 > [!TIP]
 > Further details of the LS-SPH model are described in [Shobuzako et al. (2025)](https://www.sciencedirect.com/science/article/pii/S2590037425000585).
