@@ -131,7 +131,7 @@ def main(N_inn, N_out, N_sys, WL_thick, D, mark_size, parent_path, save_path):
     Z = ana_f(X, Y)           # cal f (steady solution)
 
     cfig = ax1.contourf(X, Y, Z, levels=200, cmap='jet', vmin=-1, vmax=1)
-    cbar = plt.colorbar(cfig, aspect=30, shrink=0.9, ax=ax1, orientation='vertical', pad=0.05, location='right', \
+    cbar = plt.colorbar(cfig, aspect=30, shrink=0.8, ax=ax1, orientation='vertical', pad=0.05, location='right', \
                         ticks=[-1.0, -0.5, 0, 0.5, 1.0])
 
     # color bar
@@ -139,7 +139,7 @@ def main(N_inn, N_out, N_sys, WL_thick, D, mark_size, parent_path, save_path):
     cbar.ax.set_ylim(-1, 1)
 
     # text
-    ax1.text(0.1, -0.3, '(a) Analytical steady solution', fontsize=16)
+    ax1.text(0.08, -0.25, '(a) Analytical steady-state solution', fontsize=16)
 
     #=========================#
     #  ax2                    #
@@ -147,7 +147,7 @@ def main(N_inn, N_out, N_sys, WL_thick, D, mark_size, parent_path, save_path):
     ax2.scatter(SP_x[:N_inn, 0], SP_x[:N_inn, 1], c='silver', ec='k', marker='.', s=mark_size)
 
     # text
-    ax2.text(0.15, -0.3, '(b) Initial particle distribution', fontsize=16)
+    ax2.text(0.15, -0.25, '(b) Initial particle distribution', fontsize=16)
 
     ax_list = [ax1, ax2]
     for ax in ax_list:

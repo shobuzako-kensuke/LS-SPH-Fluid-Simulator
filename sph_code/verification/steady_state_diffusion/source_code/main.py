@@ -8,8 +8,6 @@ save_name = 'test'
 fig_ini = True   # figures for initial settings
 fig_f   = True   # snapshots of function value f
 
-# メモ：解析解の図，最終的な解析解とのL2ノルム計測（内部と境界で分ける）
-
 #=========================#
 #  scatter size           #
 #=========================#
