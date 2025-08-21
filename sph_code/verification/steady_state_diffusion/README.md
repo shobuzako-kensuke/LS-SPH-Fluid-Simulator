@@ -86,7 +86,7 @@ where $f _{i} \equiv f(\vec{x} _{i})$, $\Omega _{i}$ is the index set of the par
 \nabla^{2} f|_{\vec{x}=\vec{x} _{i}} = 2\sum_{j\in \Omega _{i}}\left(f _{j}-f_{i}\right) \frac{\vec{x} _{ji} \cdot \nabla _{i} W_{ij}}{r _{ij}^{2}} V_{j} + \mathcal{O}\left((\Delta x)^{-1} \right)~,
 \end{align}
 ```
-where $f _{i} \equiv f(\vec{x} _{i})$, $\Omega _{i}$ is the index set of the particles located within the support of the kernel function centered at $\vec{x} _{i}$, $\vec{x}_{ji} \equiv \vec{x}_{j}-\vec{x}_{i}$, $W _{ij} \equiv W(r _{ij};h)$ is the kernel function ($r _{ij} \equiv |\vec{x} _{i}-\vec{x} _{j}|$ and $h$ is the smoothing length), $V _{j}$ is the volume of particle $j$, and $\Delta x$ is the typical particle distance.
+where $f _{i} \equiv f(\vec{x} _{i})$, $\Omega _{i}$ is the index set of the particles located within the support of the kernel function centered at $\vec{x} _{i}$, $\vec{x} _{ji} \equiv \vec{x} _{j}-\vec{x} _{i}$, $W _{ij} \equiv W(r _{ij};h)$ is the kernel function ($r _{ij} \equiv |\vec{x} _{i}-\vec{x} _{j}|$ and $h$ is the smoothing length), $V _{j}$ is the volume of particle $j$, and $\Delta x$ is the typical particle distance.
 
 <!-- `corrected_SPH_0th`  
 ```math
