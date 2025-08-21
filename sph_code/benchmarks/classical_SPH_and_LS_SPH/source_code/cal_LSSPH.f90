@@ -56,7 +56,7 @@ subroutine cal_LSSPH(q, n, N_link, W_link, x_link, y_link, &
         a_vec(8) = x_ji*y_ji**2.0d0/2.0d0 / h**3.0d0
         a_vec(9) = y_ji**3.0d0     /6.0d0 / h**3.0d0
 #elif defined(LSSPH_2ND)
-        ! including 2 order derivatives
+        ! including 2nd-order derivatives
         a_vec(1) = x_ji                   / h
         a_vec(2) = y_ji                   / h
         a_vec(3) = x_ji**2.0d0     /2.0d0 / h**2.0d0
