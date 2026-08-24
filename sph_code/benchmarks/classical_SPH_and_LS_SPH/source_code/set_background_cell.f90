@@ -25,7 +25,7 @@ subroutine set_background_cell
     cell_max   = cell_x_max + (cell_y_max - 1) * cell_x_max  ! max cell number
     
     !=========================!
-    !  allocate               ! 
+    !  allocate               !
     !=========================!
     allocate(cell     (N_sys))      ! cell   (me) = my cell number
     allocate(cell_VM  (N_VM))       ! cell_VM(me) = cell number for VM

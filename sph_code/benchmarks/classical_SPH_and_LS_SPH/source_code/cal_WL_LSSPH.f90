@@ -50,7 +50,7 @@ subroutine cal_WL_LSSPH(q, n, N_link, W_link, x_link, y_link, &
         a_vec(10)= y_ji**3.0d0     /6.0d0 / h**3.0d0
 
 #elif defined(WL_3RD)
-        ! including 2 order derivatives
+        ! including 2nd-order derivatives
         a_vec(1) = 1.0d0
         a_vec(2) = x_ji                   / h
         a_vec(3) = y_ji                   / h
@@ -59,7 +59,7 @@ subroutine cal_WL_LSSPH(q, n, N_link, W_link, x_link, y_link, &
         a_vec(6) = y_ji**2.0d0     /2.0d0 / h**2.0d0
 
 #elif defined(WL_2ND)
-        ! including 1 order derivatives
+        ! including 1st-order derivatives
         a_vec(1) = 1.0d0
         a_vec(2) = x_ji                   / h
         a_vec(3) = y_ji                   / h

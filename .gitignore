@@ -13,3 +13,21 @@
 
 # Windows Zone.Identifier metadata files
 **/*Zone.Identifier
+
+# LaTeX temporary files
+**/*.aux
+**/*.bbl
+**/*.blg
+**/*.dvi
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.out
+**/*.synctex.gz
+**/*.toc
+
+# tex_edit
+**/tex_edit/
+
+# document
+**/document/
