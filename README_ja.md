@@ -1,10 +1,17 @@
 # LS-SPH-Fluid-Simulator
 
+> **重要なお知らせ (2026-08-24):**
+> 本リポジトリの更新は終了しました. 
+> パフォーマンス向上のために，本プロジェクトはリファクタリングされ，新しいリポジトリに移行されました．
+> 
+> 👉 **新しいリポジトリはこちら:** [LS-SPH-Benchmarks](https://github.com/shobuzako-kensuke/LS-SPH-Benchmarks)
+
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15709255.svg)](https://doi.org/10.5281/zenodo.15709255)
 
 [English README](./README.md)
 
-本リポジトリは，**Least Squares Smoothed Particle Hydrodynamics (LS-SPH) method** [[1](#ref1)] および，その発展版 **Enhanced and Explicit LS-SPH (ELS-SPH) method** に基づく様々なシミュレーションコードを提供しています．  
+本リポジトリは，**Least Squares Smoothed Particle Hydrodynamics (LS-SPH) method** [[1](#ref1)] に基づく様々なシミュレーションコードを提供しています．  
 
 以下の計算が可能です．
 
@@ -12,14 +19,8 @@
    - Taylor-Green vortex
    - Lid-driven cavity flow
    - Boussinesq convection
-   - ~~Oscillating drop~~
-   - ~~Dam break~~
+
 2. 地球物理および工学分野における応用問題（現在開発中）  
-
-
-|Taylor-Green vortex | Lid-driven cavity flow | Boussinesq convection |
-|:---:|:---:|:---:|
-|<img src="https://github.com/user-attachments/assets/cb0b81a5-61bb-4860-b0f8-f94014b2cc68" alt="granular_column_collapse" width=300>|<img src="https://github.com/user-attachments/assets/fd3fed95-f3f8-4f3f-941c-7b6204d75d1b" alt="cylinder_lift" width=300>|<img src="https://github.com/user-attachments/assets/fd3fed95-f3f8-4f3f-941c-7b6204d75d1b" alt="cylinder_lift" width=300>|
 
 
 ## ⚙️ 動作環境
@@ -47,7 +48,7 @@
 
 ## 🖥️ 使い方
 
-1. 該当ディレクトリに移動 (例：`sph_code/benchmarks/ELS_SPH/Taylor_Green_vortex/source_code`)
+1. 該当ディレクトリに移動
 2. ターミナルから `make` を実行し，Fortranファイルをコンパイル
 3. 続けて，`./start_calculation` を実行し，計算を開始
 4. 計算終了後, `python main.py` を実行し，動画等を作成

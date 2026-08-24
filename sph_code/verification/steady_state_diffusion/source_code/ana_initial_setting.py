@@ -147,7 +147,7 @@ def main(N_inn, N_out, N_sys, WL_thick, D, mark_size, parent_path, save_path):
     ax2.scatter(SP_x[:N_inn, 0], SP_x[:N_inn, 1], c='silver', ec='k', marker='.', s=mark_size)
 
     # text
-    ax2.text(0.15, -0.25, '(b) Initial particle distribution', fontsize=16)
+    ax2.text(0.15, -0.25, '(b) Initial particle arrangement', fontsize=16)
 
     ax_list = [ax1, ax2]
     for ax in ax_list:

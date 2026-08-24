@@ -1,10 +1,17 @@
 # LS-SPH-Fluid-Simulator
 
+> **Important Notice (2026-08-24):**
+> This repository is no longer actively maintained. 
+> The project has been completely refactored and moved to a new repository with performance improvements.
+> 
+> 👉 **Please visit the new repository:** [LS-SPH-Benchmarks](https://github.com/shobuzako-kensuke/LS-SPH-Benchmarks)
+
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15709255.svg)](https://doi.org/10.5281/zenodo.15709255)
 
 [日本語版はこちら](./README_ja.md)  
 
-This open-source code implements various simulations based on the **Least Squares Smoothed Particle Hydrodynamics (LS-SPH) method** [[1](#ref1)] and its advanced version, the **Enhanced and Explicit LS-SPH (ELS-SPH) method**.  
+This open-source code implements various simulations based on the **Least Squares Smoothed Particle Hydrodynamics (LS-SPH) method** [[1](#ref1)].  
 
 This code includes the following examples:  
 
@@ -12,14 +19,8 @@ This code includes the following examples:
    - Taylor-Green vortex
    - Lid-driven cavity flow
    - Boussinesq convection
-   - ~~Oscillating drop~~
-   - ~~Dam break~~
+   
 2. Applications to geophysical and engineering problems (currently under development)
-
-|Taylor-Green vortex | Lid-driven cavity flow | Boussinesq convection |
-|:---:|:---:|:---:|
-|<img src="https://github.com/user-attachments/assets/cb0b81a5-61bb-4860-b0f8-f94014b2cc68" alt="granular_column_collapse" width=300>|<img src="https://github.com/user-attachments/assets/fd3fed95-f3f8-4f3f-941c-7b6204d75d1b" alt="cylinder_lift" width=300>|<img src="https://github.com/user-attachments/assets/fd3fed95-f3f8-4f3f-941c-7b6204d75d1b" alt="cylinder_lift" width=300>|
-
 
 ## ⚙️ Requirements
 
@@ -39,7 +40,7 @@ This code is written in **Fortran** (for calculations) and **Python** (for visua
 
 ## 🖥️ Usage
 
-1. Navigate to the simulation directory (e.g., `sph_code/benchmarks/ELS_SPH/Taylor_Green_vortex/source_code`)
+1. Navigate to the simulation directory
 2. Run `make` to build the Fortran programs.
 3. Run `./start_calculation` to start the calculation.
 4. After the simulation finishes, run `python main.py` to generate figures.
